@@ -1,9 +1,9 @@
-<robot name="alvar_tile" xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="crack_2" xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <link name="alvar_tile">
+  <link name="crack_2">
     <visual>
     <geometry>
-      <mesh filename="$(find larics_gazebo_worlds)/models/crack_2/alvar_tile.dae" scale="0.3 0.3 0.3" />
+      <mesh filename="$(find larics_gazebo_worlds)/models/crack_2/crack_2.dae" scale="0.3 0.3 0.3" />
     </geometry>
     </visual>
     <inertial>
@@ -15,7 +15,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="$(find larics_gazebo_worlds)/models/crack_2/alvar_tile.dae" scale="0.3 0.3 0.3" />
+        <mesh filename="$(find larics_gazebo_worlds)/models/crack_2/crack_2.dae" scale="0.3 0.3 0.3" />
       </geometry>
     </collision>
   </link>
