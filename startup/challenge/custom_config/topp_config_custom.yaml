@@ -2,6 +2,7 @@ topp_tracker:
   sampling_frequency: 100
   n_gridpoints: 500
   request_permission: False
+  from_odom: False
 
   constraints:
 
@@ -12,7 +13,7 @@ topp_tracker:
       yaw: 2.5
 
     acceleration:
-      x: 2.75
-      y: 2.75
-      z: 2.75
+      x: 1.5
+      y: 1.5
+      z: 1.0
       yaw: 1.5

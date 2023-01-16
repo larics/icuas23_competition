@@ -5,9 +5,9 @@ control:
 
   ff_gain:
     velocity:
-      x: 0.0
-      y: 0.0
-      z: 0.0
+      x: 1.0
+      y: 1.0
+      z: 1.0
     acceleration:
       x: 0.0
       y: 0.0
@@ -43,17 +43,17 @@ control:
 
   pos_z:
     kp: 3
-    ki: 0.05
+    ki: 0.1
     kd: 0
     lim_low: -15.0
     lim_high: 15.0
 
   vel_z:
-    kp: 0.15
-    ki: 0.0
+    kp: 0.18
+    ki: 0.075
     kd: 0.0
     lim_low: -0.1
-    lim_high: 0.3
+    lim_high: 0.8
   
   yaw_rate:
     kp: 1.0
