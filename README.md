@@ -124,11 +124,22 @@ Configuration files are placed in the ```startup/challenge/custom_config``` fold
 
 ## Challenge
 
-More details on the challenge can be found in the competition rulebook
+More details on the challenge can be found in the competition rulebook. After the UAV and the world is spawned, several textured tiles are spawned around the arena. The UAV needs to navigate the arena and find and classify tiles.
 
 | ![challenge.png](.fig/challenge.png) | 
 |:--:| 
 | UAV in the simulation arena for the ICUAS 2023 challenge. |
 
+| ![uav_view.png](.fig/uav_view.png) | 
+|:--:| 
+| View of several textured tiles from the UAV camera. |
+
+
+### Important node for running your code
+Remember that you should run your code alongside the existing setup through the session file. Use the existing solution section. You can use either existing waits to spawn your nodes or setup your nodes to listen to the following topic:
+
 * ```challenge_started``` - After ```True``` is published on this topic the challenge is setup correctly and you can safely run your code.
+
+### Changing the tile locations for testing
+You can change tile locations through session file or spawn them from a separate terminal. Use position args to change the location of the tile. 
 
