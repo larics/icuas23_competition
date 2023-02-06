@@ -22,7 +22,7 @@ windows:
           x:=10 y:=2
           world:=$(rospack find icuas23_competition)/worlds/well_lit.world
         - waitForRos; waitForSimulation; roslaunch icuas23_competition spawn_inspection_world.launch
-        - waitForRos; waitForSimulation; sleep 2; roslaunch icuas23_competition spawn_crack.launch name:=crack_1 x:=3 y:=43.36 z:=8 yaw:=-1.5707; roslaunch icuas23_competition spawn_crack.launch name:=crack_2 x:=8 y:=43.36 z:=12 yaw:=-1.5707
+        - waitForRos; waitForSimulation; sleep 2; rosrun icuas23_competition spawn_tiles.py
   - arm&takeof:
       layout: tiled
       panes:
