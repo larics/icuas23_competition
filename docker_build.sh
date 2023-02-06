@@ -2,7 +2,7 @@
 
 echo "Building icuas23_competition Docker image"
 
-distro="bionic"
+distro="focal"
 build_args=""
 for (( i=1; i<=$#; i++));
 do
