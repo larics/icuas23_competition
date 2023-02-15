@@ -22,7 +22,7 @@ windows:
           x:=10 y:=2
           world:=$(rospack find icuas23_competition)/worlds/well_lit.world
         - waitForRos; waitForSimulation; roslaunch icuas23_competition spawn_inspection_world.launch
-        - waitForRos; waitForSimulation; sleep 2; rosrun icuas23_competition spawn_tiles.py
+        - waitForRos; waitForSimulation; sleep 2; rosrun icuas23_competition spawn_tiles.py __ns:="$UAV_NAMESPACE"
   - arm&takeof:
       layout: tiled
       panes:

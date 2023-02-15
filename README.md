@@ -122,6 +122,13 @@ Configuration files are placed in the ```startup/challenge/custom_config``` fold
 * [Position Control](startup/challenge/custom_config/position_control_custom.yaml)
 * [TOPP Trajectory Generation](startup/challenge/custom_config/topp_config_custom.yaml)
 
+
+### Points of interest
+
+Point of interest are provided on the topic ```poi``` within the UAV namespace. The message contains an array of ```geometry_msgs/Point``` messages, containing x, y and z locations of a cylinder that contains a tile. The radius of each cylinder is 2.5 meters and the height of the cylinder is 5 meters. 
+
+One PoI cylinder is spawned for each of the tiles, and they may overlap and include more than one tile. The cylinder may also include obstacles.
+
 ## Challenge
 
 More details on the challenge can be found in the competition rulebook. After the UAV and the world is spawned, several textured tiles are spawned around the arena. The UAV needs to navigate the arena and find and classify tiles.
@@ -138,7 +145,10 @@ More details on the challenge can be found in the competition rulebook. After th
 ### Important node for running your code
 Remember that you should run your code alongside the existing setup through the session file. Use the existing solution section. You can use either existing waits to spawn your nodes or setup your nodes to listen to the following topic:
 
-* ```challenge_started``` - After ```True``` is published on this topic the challenge is setup correctly and you can safely run your code.
+* ```challenge_started``` - After ```True``` is published on this topic the UAV is setup correctly.
+* ```poi``` - After the array of points of interest is published on this topic the arena is setup correctly.
+
+Make sure to wait for data on both topics to safely run your code.
 
 ### Changing the tile locations for testing
 You can change tile locations through session file or spawn them from a separate terminal. Use position args to change the location of the tile. 

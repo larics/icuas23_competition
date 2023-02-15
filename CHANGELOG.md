@@ -1,3 +1,14 @@
+## [1.0.2] - 15-02-2023
+ 
+### Added
+   
+- Added points of interest message type (array of geometry_msgs/Point)
+
+### Changed
+- Updated tile spawning script to include generation and publisher of points-of-interest
+- Updated package.xml, CmakeLists.txt
+- Updated README
+
 ## [1.0.1] - 06-02-2023
  
 ### Added
