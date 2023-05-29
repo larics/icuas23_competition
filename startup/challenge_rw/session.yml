@@ -27,7 +27,7 @@ windows:
           msf_callback_enable:=true
           odometry:=$ODOM_TOPIC
           control_type:=pid_cascade_node_yawrate
-          default_params:=$(rospack find uav_ros_control)/config/control/optitrack_position_control_falcon.params.yaml
+          default_params:=$(rospack find uav_ros_control)/config/control/optitrack_position_control_falcon_thrust.params.yaml
           hold_trajectory:=position_hold/final_trajectory
           carrot_frame_id:=$MAP_FRAME
           carrot_land:=true
