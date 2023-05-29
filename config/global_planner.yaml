@@ -65,7 +65,7 @@ octomap:
   # Search depth of octomap tree. 16 is best resolution, slowest search(although
   # experience shows that there is no significant increase in search time by 
   # setting this parameter to < 16)
-  search_depth: 16
+  search_depth: 13
 
 path_planner:
   spaces:
@@ -185,7 +185,7 @@ trajectory_planner:
 
 state_validity_checker:
   # State validity checker examples. Note that type can also be point.
-  type: "ball"
+  type: "prism"
 
   # If ball is selected a set of concentric spheres will be generated for
   # state validity checking.
@@ -220,4 +220,4 @@ state_validity_checker:
     x_dimension: 0.8
     y_dimension: 0.8
     z_dimension: 0.3
-    resolution: 0.2
+    resolution: 0.1
