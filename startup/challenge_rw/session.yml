@@ -23,15 +23,14 @@ windows:
       layout: tiled
       panes:
         - waitForRos; roslaunch uav_ros_control pid_carrot.launch 
-          manual_takeoff:=false
           msf_callback_enable:=true
           odometry:=$ODOM_TOPIC
           control_type:=pid_cascade_node_yawrate
           default_params:=$(rospack find uav_ros_control)/config/control/optitrack_position_control_falcon_thrust.params.yaml
+          carrot_config:=$(rospack find icuas23_competition)/config/carrot_config.yaml
           hold_trajectory:=position_hold/final_trajectory
           carrot_frame_id:=$MAP_FRAME
           carrot_land:=true
-          land_disarm_enabled:=true
           geofence_enabled:=true
           geofence_config:=$GEOFENCE_CONFIG
         - history -s "waitForRos; roslaunch uav_ros_control uav_manager.launch odometry:=$ODOM_TOPIC"
