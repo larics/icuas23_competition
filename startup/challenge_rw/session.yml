@@ -51,6 +51,10 @@ windows:
           map_frame_id:=$MAP_FRAME
           base_link_frame_id:=$BASE_LINK
           map_file:=$OCTOMAP_FILE
+  - bag:
+      layout: tiled
+      panes:
+        - history -s "rosbag record /red/camera/color/camera_info /red/camera/color/image_raw/compressed /red/camera/depth/camera_info /red/camera/depth/image_rect_raw /red/mavros/imu/data /falconblack/vrpn_client/estimated_odometry -o /root/bags/icuas23_test"
   - transforms:
       layout: tiled
       panes:
