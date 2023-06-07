@@ -51,6 +51,7 @@ windows:
           map_frame_id:=$MAP_FRAME
           base_link_frame_id:=$BASE_LINK
           map_file:=$OCTOMAP_FILE
+        - waitForRos; rosrun icuas_support wp_spawner.py __ns:=$UAV_NAMESPACE
   - bag:
       layout: tiled
       panes:
