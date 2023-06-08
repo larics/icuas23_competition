@@ -65,7 +65,7 @@ octomap:
   # Search depth of octomap tree. 16 is best resolution, slowest search(although
   # experience shows that there is no significant increase in search time by 
   # setting this parameter to < 16)
-  search_depth: 13
+  search_depth: 15
 
 path_planner:
   spaces:
@@ -190,8 +190,8 @@ state_validity_checker:
   # If ball is selected a set of concentric spheres will be generated for
   # state validity checking.
   ball:
-    radius: 0.5
-    resolution: 0.1
+    radius: 0.6
+    resolution: 0.03
 
   # Just one sphere
   sphere:
@@ -217,7 +217,7 @@ state_validity_checker:
 
   # Prism will be a set of rectangles
   prism:
-    x_dimension: 0.8
-    y_dimension: 0.8
+    x_dimension: 1.2
+    y_dimension: 1.2
     z_dimension: 0.3
-    resolution: 0.1
+    resolution: 0.03

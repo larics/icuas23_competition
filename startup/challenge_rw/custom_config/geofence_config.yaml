@@ -1,6 +1,6 @@
 frame_id: "optitrack"
 
-max_alt: 3
+max_alt: 1.75
 min_alt: 0.5
 
 gps_constraints:
@@ -18,11 +18,11 @@ gps_constraints:
 #    alt: 7
 
 local_constraints:
-  - x: -3.0
-    y: 2.0
-  - x: -3.0
-    y: -2.0
-  - x: 3.0
-    y: -2.0
-  - x: 3.0
-    y: 2.0
+  - x: -5.0
+    y: 4.0
+  - x: -5.0
+    y: -4.0
+  - x: 5.0
+    y: -4.0
+  - x: 5.0
+    y: 4.0

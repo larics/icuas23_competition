@@ -4,12 +4,12 @@ rostopic pub /red/position_hold/trajectory trajectory_msgs/MultiDOFJointTrajecto
 - translation:
     x: $1
     y: $2
-    z: 1.5
+    z: 1.2
   rotation:
     x: 0.0
     y: 0.0
     z: 0.0
-    w: 0.0
+    w: 1.0
 velocities:
 - linear:
     x: 0.0

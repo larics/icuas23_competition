@@ -42,7 +42,7 @@ windows:
           input_trajectory:=tracker/final_input_trajectory
           input_pose:=tracker/final_input_pose
         - waitForRos; roslaunch uav_ros_indoor safety_node.launch
-          config:=$(rospack find uav_ros_indoor)/config/safety_config.yaml
+          config:=$(rospack find icuas23_competition)/config/safety_config.yaml
   - safety:
       layout: tiled
       panes:
@@ -51,12 +51,14 @@ windows:
           map_frame_id:=$MAP_FRAME
           base_link_frame_id:=$BASE_LINK
           map_file:=$OCTOMAP_FILE
-        - waitForRos; rosrun icuas_support wp_spawner.py $(rospack find icuas_support)/resources/waypoints_warszava_1.csv __ns:=$UAV_NAMESPACE
+        - waitForRos; rosrun icuas_support wp_spawner.py $(rospack find icuas_support)/resources/waypoints_warszawa_2.csv __ns:=$UAV_NAMESPACE
 
   - bag:
       layout: tiled
       panes:
-        - history -s "rosbag record /red/camera/color/camera_info /red/camera/color/image_raw/compressed /red/camera/depth/camera_info /red/camera/depth/image_rect_raw /red/mavros/imu/data /falconblack/vrpn_client/estimated_odometry -o /root/bags/icuas23_test"
+        - history -s "rosbag record /red/camera/color/camera_info /red/camera/color/image_raw/compressed /red/camera/depth/camera_info /red/camera/depth/image_rect_raw /red/camera/aligned_depth_to_color/camera_info /red/camera/aligned_depth_to_color/image_raw /red/mavros/imu/data /falconblack/vrpn_client/estimated_odometry -o /root/bags/icuas23_test"
+        - waitForRos; rosbag record /red/crack_image_annotated /red/poi /red/mavros/imu/data /falconblack/vrpn_client/estimated_odometry /red/position_hold/trajectory /red/tracker/input_pose /red/tracker/input_trajectory /red/challenge_started /red/poi /tf /tf_static -o /root/bags/icuas23_run_${TEAM_NAME}
+        - waitForRos; rostopic hz --window=500 /falconblack/vrpn_client/estimated_odometry
   - transforms:
       layout: tiled
       panes:

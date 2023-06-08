@@ -39,14 +39,14 @@ export PATH_PLANNER_CONFIG=$(rospack find icuas23_competition)/config/global_pla
 export MODEL_CORRECTION_CONFIG=$(rospack find larics_motion_planning)/config/model_correction_config_example.yaml
 
 # Empty map
-#export OCTOMAP_FILE=$(rospack find larics_motion_planning)/config/empty_map.binvox.bt
+# export OCTOMAP_FILE=$(rospack find larics_motion_planning)/config/empty_map.binvox.bt
 
 # Uncomment this if using a real map
-export OCTOMAP_FILE=$(pwd)/custom_config/icuas2022_arena_latest.binvox.bt
-
+# export OCTOMAP_FILE=$(pwd)/custom_config/icuas2022_arena_latest.binvox.bt
+export OCTOMAP_FILE=$(rospack find icuas_support)/resources/arena_warszawa_2.binvox.bt
 
 # Optitrack parameters
-export OBJECT_NAME=hawk2
+export OBJECT_NAME=falconblack
 export ODOM_TOPIC=/$OBJECT_NAME/vrpn_client/estimated_odometry
 export OPTITRACK_IP=192.168.1.50
 export GEOFENCE_CONFIG=$(pwd)/custom_config/geofence_config.yaml
@@ -59,3 +59,5 @@ export MAP_FRAME=optitrack
 # Camera parameters
 export CAMERA_LINK=$UAV_NAMESPACE/camera
 export BASE_LINK=$UAV_NAMESPACE/base_link
+
+export TEAM_NAME=SDNCLAB
