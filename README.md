@@ -1,6 +1,22 @@
 # ICUAS 2023 UAV Competition
 The main repository for the ICUAS 2023 UAV competition.
 
+If you're interested in publishing papers based on this repository, please cite the following publication:
+```
+@article{Markovic2023,
+  doi = {10.1007/s10846-023-01909-z},
+  url = {https://doi.org/10.1007/s10846-023-01909-z},
+  year = {2023},
+  month = jul,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {108},
+  number = {3},
+  author = {Lovro Markovic and Frano Petric and Antun Ivanovic and Jurica Goricanec and Marko Car and Matko Orsag and Stjepan Bogdan},
+  title = {Towards A Standardized Aerial Platform: {ICUAS}'22 Firefighting Competition},
+  journal = {Journal of Intelligent {\&}amp$\mathsemicolon$ Robotic Systems}
+}
+```
+
 ## Install
 
 You can either manually install the UAV software stack by following 
